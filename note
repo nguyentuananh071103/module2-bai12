@@ -1,0 +1,34 @@
+Sắp xếp chèn là gì?
+-Sắp xếp chèn là  một thuật toán sắp xếp bắt chước cách sắp xếp quân bài của những người chơi bài. Muốn sắp một bộ bài
+theo trật tự người chơi bài rút lần lượt từ quân thứ 2, so với các quân đứng trước nó để chèn vào vị trí thích hợp.
+
+-Ở đây, một danh sách con (hoặc một mảng) luôn luôn được duy trì dưới dạng đã qua sắp xếp tại một thời điểm. Sắp xếp
+chèn là chèn thêm một phần tử vào danh sách con đã qua sắp xếp. Phần tử được chèn vào vị trí thích hợp sao cho vẫn đảm
+bảo rằng danh sách con đó vẫn sắp theo thứ tự.
+
+- Một số ưu điểm của sắp xếp chèn:
++, Triển khai đơn gản
++, Hiệu quả cho các tập dữ liệu nhỏ(vừa), giống như các thuật toán sắp xếp bậc hai khác nhau
++, Hiệu quả hơn trong thực tế so với hầu hết các giải thuật bậc hai đơn giản khác (tức là, các thuật toán có thời gian
+tính O(n2)) như sắp xếp chọn hoặc sắp xếp nổi bọt
++, Thích ứng (Adaptive): hiệu quả cho các tập dữ liệu đã được sắp xếp đáng kể, độ phức tạp thời gian là O(nk) khi mỗi
+phần tử trong đầu vào không quá k vị trí so với vị trí được sắp xếp của nó
++, Ổn định (Stable): tức là không thay đổi thứ tự tương đối của các phần tử với các khóa bằng nhau
++, in-place (Tìm In-place algorithm): tức là chỉ yêu cầu một lượng không đổi O(1) của không gian bộ nhớ bổ sung
++, Trực tuyến (Online) tức là, có thể sắp xếp một danh sách ngay khi nó nhận được nó
+
+Các bước của giải thuật sắp xếp chèn.
+Bước 1: Kiểm tra nếu phần tử đầu tiên đã được sắp xếp. trả về 1
+Bước 2: Lấy phần tử kế tiếp
+Bước 3: So sánh với tất cả phần tử trong danh sách con đã qua sắp xếp
+Bước 4: Dịch chuyển tất cả phần tử trong danh sách con mà lớn hơn giá trị để được sắp xếp
+Bước 5: Chèn giá trị đó
+Bước 6: Lặp lại cho tới khi danh sách được sắp xếp
+
+
+Ý tưởng:
+• Thuật toán sắp xếp chèn thực hiện sắp xếp dãy số theo cách duyệt
+từng phần tử và chèn từng phần tử đó vào đúng vị trí trong mảng
+con(dãy số từ đầu đến phần tử phía trước nó) đã sắp xếp sao cho dãy
+số trong mảng sắp đã xếp đó vẫn đảm bảo tính chất của một dãy số
+tăng dần.
